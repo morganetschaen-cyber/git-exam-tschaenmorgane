@@ -121,5 +121,7 @@ Vous devez :
 
 1. Revenir à l'état précédent avec `git reset` ou `git revert`.
 2. Expliquer la différence entre les deux commandes.
-   git revert crée un nouveau commit qui annule un commit précédent, sans modifier l’historique.
-   git reset supprime ou déplace les commits dans l’historique, ce qui peut être dangereux car cela le réécrit.
+   - git revert crée un nouveau commit qui annule un commit précédent, sans modifier l’historique.
+   - git reset supprime ou déplace les commits dans l’historique, ce qui peut être dangereux car cela le réécrit.
+
+   J’ai choisi git revert car, le commit problématique avait déjà été push sur la branche main, il ne faut jamais réécrire l’historique d’une branche partagée, donc revert est la solution recommandée pour corriger proprement sans casser l’historique.
